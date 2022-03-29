@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>火纹</title>
+<link rel="stylesheet" th:href="@{/common.css}"/>
+<script type="text/javascript" th:src="@{/jquery-3.4.1.min.js}"></script>
+<script type="text/javascript" th:src="@{/commonService.js}"></script>
+</head>
+<body >
+    <div class="top" style="background:#fff;width:100%;position:fixed;top:0;left:0;line-height:2em;z-index:999">
+        <span></span>
+    </div>
+    
+    <aside style="background:#fff;width:300px;padding-left:25px;float:right">
+      <div class="link_box">
+          <a href="#">回到桌面</a>
+      </div>
+    </aside>
+    
+    <main>
+      <table cellspacing="0" style="width: 3000px">
+        <thead>
+          <tr>
+            <td>ID</td>
+            <td>英雄ID</td>
+            <td>称号</td>
+            <td>名</td>
+            <td>昵称</td>
+            <td>立绘名</td>
+            <td>作品</td>
+            <td>生命</td>
+            <td>攻击</td>
+            <td>速度</td>
+            <td>防御</td>
+            <td>魔防</td>
+            <td>武器</td>
+            <td>A技能</td>
+            <td>B技能</td>
+            <td>C技能</td>
+            <td>圣印</td>
+            <td>支援</td>
+            <td>必杀</td>
+            <td>突破</td>
+            <td>神龙之花</td>
+            <td>支援对象</td>
+            <td>祝福</td>
+            <td>兵种</td>
+            <td>武器类型</td>
+            <td>宝珠颜色</td>
+            <td>种族</td>
+            <td>英雄类型</td>
+            <td>队伍</td>
+            <td>技能点</td>
+            <td>英雄点</td>
+            <td>特效标签</td>
+            <td>卡池</td>
+            <td>喜欢</td>
+            <td>评价等级</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr th:each="obj:${resultList}">
+            <td th:text="${obj.id}"></td>
+            <td th:text="${obj.masterId}"></td>
+            <td th:text="${obj.titleName}"></td>
+            <td th:text="${obj.name}"></td>
+            <td th:text="${obj.nickName}"></td>
+            <td th:text="${obj.imgName}"></td>
+            <td th:text="${obj.origin}"></td>
+            <td th:text="${obj.hp}"></td>
+            <td th:text="${obj.attact}"></td>
+            <td th:text="${obj.speed}"></td>
+            <td th:text="${obj.def}"></td>
+            <td th:text="${obj.mdf}"></td>
+            <td th:text="${obj.weapon}"></td>
+            <td th:text="${obj.skillA}"></td>
+            <td th:text="${obj.skillB}"></td>
+            <td th:text="${obj.skillC}"></td>
+            <td th:text="${obj.skillD}"></td>
+            <td th:text="${obj.skillS}"></td>
+            <td th:text="${obj.skillE}"></td>
+            <td th:text="${obj.limitPlus}"></td>
+            <td th:text="${obj.dragonFlower}"></td>
+            <td th:text="${obj.supportMate}"></td>
+            <td th:text="${obj.blessing}"></td>
+            <td th:text="${obj.moveType}"></td>
+            <td th:text="${obj.weaponType}"></td>
+            <td th:text="${obj.color}"></td>
+            <td th:text="${obj.race}"></td>
+            <td th:text="${obj.heroType}"></td>
+            <td th:text="${obj.team}"></td>
+            <td th:text="${obj.skillPoint}"></td>
+            <td th:text="${obj.heroPoint}"></td>
+            <td th:text="${obj.specTag}"></td>
+            <td th:text="${obj.pool}"></td>
+            <td th:text="${obj.favorite}"></td>
+            <td th:text="${obj.rank}"></td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
+</body>
+</html>
+
